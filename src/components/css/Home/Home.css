@@ -465,4 +465,31 @@
     padding: 1rem;
   }
 }
+
+.group:active {
+  background: #294a05;
+  color: #8cc384;
+}
+
+.indi:active {
+  background: #294a05;
+  color: #8cc384;
+}
+
+#signin {
+  background-image: url("../../assets/backgroundlogin.png");
+}
+
+#oddbox {
+  background: "#FFFFFF";
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  width: 100%;
+}
+
+#evenbox {
+  background: "#FFFFFF";
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
 /*# sourceMappingURL=Home.css.map */

@@ -19,8 +19,8 @@ import DashboardMenu from "./DashboardMenu";
 import AdminDetails from "./AdminDetails.jsx";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Switch, Route, NavLink, useParams } from "react-router-dom";
-import Talents from "./Talents";
-import Payments from "./Payments";
+import Allocations from "./Allocations";
+import Disbursements from "./Disbursements";
 import dashboard from "./assets/dashboard.svg"
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -129,14 +129,14 @@ const dashboardOptions = [
     "/dashboard"
   ],
   [
-    <div style={{ fontSize: "24px" }}>Talents</div>,
+    <div style={{ fontSize: "24px" }}>Allocations</div>,
     <img src={dashboard} alt="dashboard" style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
-    "/talents"
+    "/allocations"
   ],
   [
-    <div style={{ fontSize: "24px" }}>Payments</div>,
+    <div style={{ fontSize: "24px" }}>Disbursements</div>,
     <img src={dashboard} alt="farmers" style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
-    "/payments"
+    "/disbursements"
   ]
 ];
 
@@ -238,11 +238,11 @@ export default function ResponsiveDrawer(props) {
               <Route exact path="/dashboard">
                 <div>Dashboard</div>
               </Route>
-              <Route exact path="/talents">
-                <div>Talents</div>
+              <Route exact path="/allocations">
+                <div>Allocations</div>
               </Route>
-              <Route exact path="/payments">
-                <div>Payments</div>
+              <Route exact path="/disbursement">
+                <div>Disbursements</div>
               </Route>
             </Switch>
           </Typography>
@@ -287,14 +287,14 @@ export default function ResponsiveDrawer(props) {
               <DashboardMenu />
             </div>
           </Route>
-          <Route path={`/talents`}>
+          <Route path={`/allocations`}>
             <div>
-              <Talents />
+              <Allocations />
             </div>
           </Route>
-          <Route exact path={`/payments`}>
+          <Route exact path={`/disbursements`}>
             <div>
-              <Payments />
+              <Disbursements />
             </div>
           </Route>   
         </Switch>

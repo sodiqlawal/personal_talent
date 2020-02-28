@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "2.5rem",
     marginLeft: "2rem",
     position: "absolute",
-    color: "#447709",
+    color: "#0D64C9",
     fontSize: "16px",
 
     [theme.breakpoints.down("sm")]: {
@@ -95,7 +95,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   pagination: {
-    marginTop: "1.7rem", marginRight: "5rem", color: "#447709",
+    marginTop: "1.7rem", marginRight: "5rem", color: "#0D64C9",
 
     [theme.breakpoints.down("sm")]: {
       marginTop:"0.5rem",
@@ -175,13 +175,14 @@ export default function EnhancedTable(props) {
           className="btn px-3"
           onClick={displayFilter}
           style={{
-            background: "#599f0d",
+            background: "#268AFF",
             color: "#ffffff",
             fontSize: "19px",
             width: "96px",
             height: "42px",
             borderRadius: "7px",
-            boxShadow: "0px 2px 4px #00000020"
+            boxShadow: "0px 2px 4px #00000020",
+            borderWidth:"0",
           }}
         >
           Filter
@@ -190,19 +191,21 @@ export default function EnhancedTable(props) {
         <button
           className="btn ml-4 px-4"
           style={{
-            background: "#e2f3e2",
-            color: "#599f0d",
+            background: "#B5D7FF",
+            color: "#268AFF",
             fontSize: "19px",
             width: "96px",
             height: "42px",
             borderRadius: "7px",
-            boxShadow: "0px 2px 4px #00000020"
+            boxShadow: "0px 2px 4px #00000020",
+            borderWidth:"0",
+            marginLeft:"2rem"
           }}
         >
           Export
         </button>
       </div>
-      {showFilter && <FilterShow />}
+      {/* {showFilter && <FilterShow />} */}
       <Paper
         className={classes.paper}
         style={{
@@ -358,7 +361,7 @@ export default function EnhancedTable(props) {
            className={classes.bottomRowDisplay}
         >
           Displaying{" "}
-          <span style={{ borderBottom: "1px solid #447709" }}>
+          <span style={{ borderBottom: "1px solid #0D64C9" }}>
             {rowsPerPage}
           </span>{" "}
           of 8

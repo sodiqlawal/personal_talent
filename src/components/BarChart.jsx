@@ -10,12 +10,12 @@ class Charts extends Component {
         labels: ['Lag', 'Kan', 'Kad', 'Edo', 'Del', 'Bay'],
         datasets: [
           {
-            label: 'This year',
+            label: 'Enrolled',
             backgroundColor: '#8EC2FF',
             data: [28, 22, 22, 18, 22, 20]
           },
           {
-            label: 'Last year',
+            label: 'Empowered',
             backgroundColor: '#9b9b9b',
             data: [26, 24, 17, 24, 18, 22]
           }

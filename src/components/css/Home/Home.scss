@@ -413,18 +413,54 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+// display farmer
+
+.group:active {
+    background: #294a05;
+    color: #8cc384;
+  }
+  
+  .indi:active {
+    background: #294a05;
+    color: #8cc384;
+  }
+  
+  
+  
+  // signin
+  #signin {
+    background-image: url("../../assets/backgroundlogin.png");
+  }
+  
+  
+  
+  //verificationdashboardmenu
+  
+  #oddbox {
+    // background-image: url('../../assets/ovalgreen.png');
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background:"#FFFFFF";
+    box-shadow: 0px 3px 6px #00000029;
+    width: 100%;
+  }
+  
+  #evenbox {
+    // background-image: url('../../assets/ovalgrey.png');
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background:"#FFFFFF";
+    box-shadow: 0px 3px 6px #00000029;
+  }
+  

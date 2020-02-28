@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./css/Home/Home.css"
-// import { makeStyles, useTheme, createStyles } from "@material-ui/core/styles";
 import { makeStyles, useTheme, createStyles  } from "@material-ui/core/styles";
 import BarChart from './BarChart'
 import PieChart from './PieChart'
@@ -58,6 +57,7 @@ const useStyles = makeStyles(theme =>
     padding:"2rem 3rem",
     width:"880px",
     height:"485px",
+    background:"white",
 
     [theme.breakpoints.down("sm")]: {
       width:"95%",
@@ -82,6 +82,7 @@ const useStyles = makeStyles(theme =>
     padding:"1rem 2rem",
     width:"375px",
     height:"320px",
+    background:"white",
 
     [theme.breakpoints.down("sm")]: {
       width:"95%"
@@ -110,7 +111,7 @@ const useStyles = makeStyles(theme =>
   },
 
   container:{
-    backgroundColor:"#ffffff",
+    backgroundColor:"#f2f6fd",
     // minHeight:"1500px",
     minHeight:"100vh",
 
@@ -124,7 +125,7 @@ const useStyles = makeStyles(theme =>
     // height:"150px",
     gridGap:"4rem",
     paddingTop:"5rem",
-    justifyContent:"center"
+    justifyContent:"center",
   },
 
   count: {
@@ -132,7 +133,9 @@ const useStyles = makeStyles(theme =>
     // backgroundColor:"#a3cd60",
     padding:"1rem 3rem 1rem 1rem",
     borderRadius:"10px",
-    color:"#ffffff"
+    width:"324px",
+    height:"180px",
+    background:"white"    
   }
 })
 // })
@@ -173,14 +176,14 @@ const DashboardMenu = () => {
             {          i % 2 === 0 ? 
             <React.Fragment>
             <div className={classes.count} id="oddbox">
-            <p style={{fontSize:"25px"}}>{res.name}</p>
-            <p style={{fontSize:"50px", marginTop:"-1.5rem"}}>{res.count}</p>
+            <p style={{fontSize:"25px", color:"#9B9B9B"}}>{res.name}</p>
+            <p style={{fontSize:"50px", marginTop:"-1.5rem", color:"#000000"}}>{res.count}</p>
             </div>
             </React.Fragment> : 
             <React.Fragment>
             <div className={classes.count} id="evenbox">
-            <p style={{fontSize:"25px"}}>{res.name}</p>
-            <p style={{fontSize:"50px", marginTop:"-1.5rem"}}>{res.count}</p>
+            <p style={{fontSize:"25px", color:"#9B9B9B"}}>{res.name}</p>
+            <p style={{fontSize:"50px", marginTop:"-1.5rem", color:"#000000"}}>{res.count}</p>
             </div>
             </React.Fragment>
               
@@ -210,7 +213,7 @@ const DashboardMenu = () => {
 
         <div className={classes.chartgridbottom}>
         <div className={classes.gridthree} style={{marginTop:"2rem"}} >
-        <p style={{textAlign:"start", color:"#4A4A4A", fontSize:"24px"}}>Recovery percentage</p>
+        <p style={{textAlign:"start", color:"#4A4A4A", fontSize:"24px"}}>Gender distribution</p>
             <PieChart />
         </div>
         {/* <div className={classes.gridfour} style={{marginTop:"2rem"}}>

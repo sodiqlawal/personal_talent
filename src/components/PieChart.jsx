@@ -14,7 +14,7 @@ class Charts extends Component {
             data: [18, 5,]
           },
         ],
-        labels: ['Recovered', 'Unrecovered'],
+        labels: ['Male', 'Female'],
     }
 }
 

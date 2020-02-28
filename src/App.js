@@ -34,10 +34,10 @@ const App = () => {
         <Route exact path="/dashboard">
           <Dashboard />
         </Route>
-        <Route exact path="/talents">
+        <Route exact path="/allocations">
           <Dashboard />
         </Route>
-        <Route exact path="/payments">
+        <Route exact path="/disbursements">
           <Dashboard />
         </Route>
       </Router>

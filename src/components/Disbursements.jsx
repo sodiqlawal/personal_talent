@@ -47,24 +47,25 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-function createData(id, name, cbn, gender, lga, state, kin, action) {
-    return { id, name, cbn, gender, lga, state, kin, action };
+function createData(id, name, applicantId, phone, gender, lga, state, dob, action) {
+    return { id, name, applicantId, phone, gender, lga, state, dob, action };
   }
 
 const rows = [
-    createData(1, "Opeyemi Ariyo", "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}}/> ),
-    createData(2, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(3, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(4, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(5, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(6, "Opeyemi Ariyo",   "NG.ON.AR/AKY/000497","Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(7, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-    createData(8, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(1, "Opeyemi Ariyo", "NG.ON.AR/AKY/000497", "09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}}/> ),
+    createData(2, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(3, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(4, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(5, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(6, "Opeyemi Ariyo",   "NG.ON.AR/AKY/000497","Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(7, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+    createData(8, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
   ]
 
   const headCells = [
     { id: "name", numeric: false, disablePadding: true, label: "Name" },
-    { id: "cbn", numeric: true, disablePadding: false, label: "CBN-id" },
+    { id: "applicantId", numeric: true, disablePadding: false, label: "Applicant ID" },
+    { id: "phone", numeric: true, disablePadding: false, label: "Phone Number" },
     {
       id: "gender",
       numeric: false,
@@ -73,7 +74,7 @@ const rows = [
     },
     { id: "lga", numeric: false, disablePadding: false, label: "LGA" },
     { id: "state", numeric: false, disablePadding: false, label: "State" },
-    { id: "kin", numeric: false, disablePadding: false, label: "Next of kin" },
+    { id: "dob", numeric: false, disablePadding: false, label: "DOB" },
     { id: "action", numeric: false, disablePadding: false, label: "" }
   ];
 
@@ -87,12 +88,12 @@ export default function Payments() {
         <div className={classes.toolbar} />
 
         <Switch>
-          <Route exact path={`/farms`}>
+          <Route exact path={`/disbursements`}>
             <div>
               <DisplayTable
                 rows={rows}
                 headCells={headCells}
-                heading="Farms"
+                heading="Disbursements"
                 // actionButton={<UserProfileAction />}
                 showCheck={false}
                 showToolbar={false}
