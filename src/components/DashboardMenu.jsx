@@ -142,10 +142,10 @@ const useStyles = makeStyles(theme =>
 );
 
 const farmerCount = [
-  {name:"Total farmers", count: "5,000"},
-  {name:"Total farmers", count: "5,000"},
-  {name:"Total farmers", count: "5,000"},
-  {name:"Total farmers", count: "5,000"}
+  {name:"Total applications", count: "5,000"},
+  {name:"Total enrollments", count: "5,000"},
+  {name:"Total pre-qualified", count: "5,000"},
+  {name:"Total empowered", count: "5,000"}
 ]
 const DashboardMenu = () => {
   const responseData = [

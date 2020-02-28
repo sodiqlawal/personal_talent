@@ -174,7 +174,8 @@ export default function ResponsiveDrawer(props) {
                 width: "100%",
                 // paddingLeft:"6px",
                 // paddingRight:"6px",
-                borderRadius: "24px"
+                borderTopRightRadius: "24px",
+                borderBottomRightRadius: "24px"
               }}
               style={NavLinkStyle}
             >
@@ -241,7 +242,7 @@ export default function ResponsiveDrawer(props) {
               <Route exact path="/allocations">
                 <div>Allocations</div>
               </Route>
-              <Route exact path="/disbursement">
+              <Route exact path="/disbursements">
                 <div>Disbursements</div>
               </Route>
             </Switch>
