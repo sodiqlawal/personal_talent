@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/Home/Home.css"
+import { Link } from "react-router-dom"
 import bannerImage from "./assets/banner-image.png"
 import aboutImage from "./assets/about-image.png"
 import enumeration from "./assets/enumeration.png";
@@ -16,7 +17,7 @@ const Home = () => {
           Talents.<span>ng</span>
         </p>
         <ul className="list">
-          <li className="login">login</li>
+          <li className="login"><Link to="/signin" style={{color:"#FFFFFF"}} >login</Link></li>
           <button className="signup">Sign up</button>
         </ul>
       </div>

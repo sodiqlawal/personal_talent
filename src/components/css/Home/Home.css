@@ -476,8 +476,75 @@
   color: #8cc384;
 }
 
-#signin {
-  background-image: url("../../assets/backgroundlogin.png");
+#wrapper .nav {
+  margin-bottom: 4rem;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 8rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+@media (max-width: 576px) {
+  #wrapper .nav {
+    padding: 0rem 1rem;
+  }
+}
+
+#wrapper .nav .text {
+  font-size: 40px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  #wrapper .nav .text {
+    font-size: 30px;
+  }
+}
+
+#wrapper .nav .text span {
+  color: #268AFF;
+}
+
+#wrapper .nav .list {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+#wrapper .nav .list .login {
+  font-size: 24px;
+  -webkit-text-decoration-color: #FFFFFF;
+          text-decoration-color: #FFFFFF;
+}
+
+#wrapper .nav .list .signup {
+  text-decoration: none;
+  background-color: #268AFF;
+  font-size: 24px;
+  width: 147px;
+  height: 50px;
+  color: #FFFFFF;
+  border-width: 0;
+  margin-left: 1rem;
+}
+
+@media (max-width: 576px) {
+  #wrapper .nav .list .signup {
+    font-size: 18px;
+    width: 90px;
+  }
 }
 
 #oddbox {

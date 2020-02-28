@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: "#417505",
+    backgroundColor: "#268AFF",
     padding: '.7rem',
     borderRadius: '6px',
     textTransform: 'capitalize',
@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   container: {
-    minHeight: "100vh",
+    minHeight: "78vh",
     display: "grid",
     justifyContent: "center",
     alignItems: "center",
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   wrapper:{
-    // backgroundColor: theme.palette.primary.main,
+    backgroundColor: "#f2f6fd",
     // backgroundImage: "url('./assets/backgroundlogin.png')",   
     width: "100%"
   },
@@ -140,7 +140,21 @@ export default function SignIn() {
   },[])
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="wrapper">
+
+
+        {/* start nav */}
+      <div className="nav">
+        <p className="text">
+          Talents.<span>ng</span>
+        </p>
+        <ul className="list">
+          <li className="login">login</li>
+          <button className="signup">Sign up</button>
+        </ul>
+      </div>
+
+      {/* end nav */}
       <Container className={classes.container} component="main" id="signin" maxWidth="xl">
       {/* <img src={logo} alt="" className={classes.img} /> */}
         <CssBaseline />
