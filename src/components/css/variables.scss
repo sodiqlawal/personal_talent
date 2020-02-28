@@ -1,0 +1,38 @@
+
+@mixin iphone {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+
+@mixin tablet {
+@media (max-width: 1000px) {
+    @content;
+}
+}
+
+// @mixin tablet {
+//     @media (max-width: 770px) {
+//         @content;
+//     }
+//     }
+
+@mixin galaxy{
+    @media (max-width: 1450px) {
+      @content;
+    }
+  }
+
+//   @mixin galaxylow{
+//     @media (max-width: 1260px) {
+//       @content;
+//     }
+//   }
+
+
+@mixin desktop {
+  @media (min-width: 780px) {
+    @content;
+  }
+}
