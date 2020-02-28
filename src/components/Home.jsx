@@ -1,8 +1,8 @@
 import React from "react";
 import "./css/Home/Home.css"
 import { Link } from "react-router-dom"
-import bannerImage from "./assets/banner-image.png"
-import aboutImage from "./assets/about-image.png"
+import bannerImage from "./assets/banner-image.png";
+import aboutImage from "./assets/about-image.png";
 import enumeration from "./assets/enumeration.png";
 import verification from "./assets/verification.png";
 import disbursement from "./assets/disbursement.png";

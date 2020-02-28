@@ -12,17 +12,19 @@ const useStyles = makeStyles(theme => ({
    role:{
     //    backgroundColor: theme.palette.primary.main,
        width: '100%',
-       color: '#4a4a4a',
+       color: '#B4EBCE',
        textAlign: 'center',
        borderRadius: '20px',
        padding: '1px 10px 10px 10px',
        marginTop: '10px',
-       fontSize:"22px"
+       fontSize:"19px"
    },
    imgSrc: {
        width: '100px',
        height: '100px',
-       borderRadius: '8px',
+       borderRadius:"100%",
+       border:"6px solid #FFFFFF",
+    //    borderRadius: '8px',
        marginBottom: '1px'
    }
 }));

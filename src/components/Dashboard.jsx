@@ -86,19 +86,19 @@ const useStyles = makeStyles(theme =>
       flexGrow: 1,
       display: "flex",
       flexDirection: "column",
-      marginTop: "20px",
+    //   marginTop: "20px",
       width: "100%",
-      padding: "4rem 1rem 1rem 1.5rem",
-      height: "550px"
+    //   padding: "4rem 1rem 1rem 1.5rem",
+    //   height: "550px"
     },
     completeDrawer: {
       height: "100%",
       display: "flex",
       flexDirection: "column",
-      padding: "20px",
-      alignItems: "center",
+    //   padding: "5px",
+    //   alignItems: "center",
       background: theme.palette.primary.main,
-      paddingBottom: "50%"
+    //   paddingBottom: "50%"
     },
     signOut: {
       alignSelf: "flex-start"
