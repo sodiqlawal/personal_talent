@@ -40,6 +40,9 @@ const App = () => {
         <Route exact path="/disbursements">
           <Dashboard />
         </Route>
+        <Route exact path="/users">
+          <Dashboard />
+        </Route>
       </Router>
     </ThemeProvider>
   );

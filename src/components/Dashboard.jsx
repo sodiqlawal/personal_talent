@@ -14,6 +14,9 @@ import {
   Hidden
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import FolderIcon from '@material-ui/icons/Folder';
+import PersonIcon from '@material-ui/icons/Person';
 import { makeStyles, useTheme, createStyles } from "@material-ui/core/styles";
 import DashboardMenu from "./DashboardMenu";
 import AdminDetails from "./AdminDetails.jsx";
@@ -21,6 +24,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Switch, Route, NavLink, useParams } from "react-router-dom";
 import Allocations from "./Allocations";
 import Disbursements from "./Disbursements";
+import Users from "./User";
 import dashboard from "./assets/dashboard.svg"
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -86,7 +90,8 @@ const useStyles = makeStyles(theme =>
       flexGrow: 1,
       display: "flex",
       flexDirection: "column",
-    //   marginTop: "20px",
+      marginLeft:"-0.9rem",
+    // textAlign:"start",
       width: "100%",
     //   padding: "4rem 1rem 1rem 1.5rem",
     //   height: "550px"
@@ -130,13 +135,18 @@ const dashboardOptions = [
   ],
   [
     <div style={{ fontSize: "24px" }}>Allocations</div>,
-    <img src={dashboard} alt="dashboard" style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
+    <PersonIcon style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
     "/allocations"
   ],
   [
     <div style={{ fontSize: "24px" }}>Disbursements</div>,
-    <img src={dashboard} alt="farmers" style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
+    <FolderIcon style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
     "/disbursements"
+  ],
+  [
+    <div style={{ fontSize: "24px" }}>User mgt</div>,
+    <PersonAddIcon  style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
+    "/users"
   ]
 ];
 
@@ -245,6 +255,9 @@ export default function ResponsiveDrawer(props) {
               <Route exact path="/disbursements">
                 <div>Disbursements</div>
               </Route>
+              <Route exact path="/users">
+                <div>Users mgt</div>
+              </Route>
             </Switch>
           </Typography>
         </Toolbar>
@@ -298,6 +311,11 @@ export default function ResponsiveDrawer(props) {
               <Disbursements />
             </div>
           </Route>   
+          <Route exact path={`/users`}>
+            <div>
+              <Users />
+            </div>
+          </Route> 
         </Switch>
       </main>
     </div>
