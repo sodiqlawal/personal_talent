@@ -230,21 +230,19 @@ export default function EnhancedTable(props) {
                             key={ind}
                             style={{ color:"#4B4B4B", fontSize: "17px" }}
                           >
-                            {/* {val === "Active" ? (
+                            {val === "Active" ? (
                               <div
                                 style={{
-                                  backgroundColor: "#09a23c",
-                                  color: "white",
-                                  borderRadius: "10px",
-                                  width: "100px",
-                                  padding: "0.5rem 2rem"
+                                  color: "#268AFF",
+                                //   width: "100px",
+                                //   padding: "0.5rem 2rem"
                                 }}
                               >
                                 Active
                               </div>
-                            ) */}
-                             {/* : */}
-                             { val === "Deactivated" ? (
+                            ) 
+                              :
+                              val === "Deactivated" ? (
                               <div
                                 style={{
                                   backgroundColor: "#de1325",
@@ -268,29 +266,21 @@ export default function EnhancedTable(props) {
                               >
                                 Pending
                               </div>
-                            ) : val === "Completed" ? (
+                            ) : val === "Open" ? (
                               <div
                                 style={{
-                                  backgroundColor: "#09a23c",
-                                  color: "white",
-                                  borderRadius: "10px",
-                                  width: "130px",
-                                  padding: "0.5rem 2rem"
+                                  color: "#268AFF",
                                 }}
                               >
-                                Completed
+                                Open
                               </div>
-                            ) : val === "Approved" ? (
+                            ) : val === "Closed" ? (
                               <div
                                 style={{
-                                  backgroundColor: "#09a23c",
-                                  color: "white",
-                                  borderRadius: "10px",
-                                  width: "130px",
-                                  padding: "0.5rem 2rem"
+                                  color: "#de1325",
                                 }}
                               >
-                                Approved
+                                Closed
                               </div>
                             ) : val === "user" ? (
                               <div className={classes.profile}>

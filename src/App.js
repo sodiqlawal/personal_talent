@@ -54,6 +54,9 @@ const App = () => {
         <Route exact path="/dashboard">
           <Dashboard />
         </Route>
+        <Route exact path="/applicants">
+          <Dashboard />
+        </Route>
         <Route exact path="/allocations">
           <Dashboard />
         </Route>

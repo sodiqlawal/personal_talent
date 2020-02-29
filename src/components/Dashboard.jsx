@@ -23,6 +23,7 @@ import DashboardMenu from "./DashboardMenu";
 import AdminDetails from "./AdminDetails.jsx";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { Switch, Route, NavLink, useParams } from "react-router-dom";
+import Applicants from "./Applicants";
 import Allocations from "./Allocations";
 import Disbursements from "./Disbursements";
 import Users from "./User";
@@ -134,6 +135,11 @@ const dashboardOptions = [
     <div style={{ fontSize: "24px" }}>Dashboard</div>,
     <img src={dashboard} alt="dashboard" style={{ color: "white", fontSize: "1.5rem", marginLeft: "10px" }} id="icon" />,
     "/dashboard"
+  ],
+  [
+    <div style={{ fontSize: "24px" }}>Applicants</div>,
+    <PersonIcon style={{ color: "white", fontSize: "1.6rem", marginLeft: "10px" }} />,
+    "/applicants"
   ],
   [
     <div style={{ fontSize: "24px" }}>Allocations</div>,
@@ -251,6 +257,9 @@ export default function ResponsiveDrawer(props) {
               <Route exact path="/dashboard">
                 <div>Dashboard</div>
               </Route>
+              <Route exact path="/applicants">
+                <div>Applicants</div>
+              </Route>
               <Route exact path="/allocations">
                 <div>Allocations</div>
               </Route>
@@ -303,7 +312,12 @@ export default function ResponsiveDrawer(props) {
               <DashboardMenu />
             </div>
           </Route>
-          <Route path={`/allocations`}>
+          <Route exact path={`/applicants`}>
+            <div>
+              <Applicants />
+            </div>
+          </Route>
+          <Route exact path={`/allocations`}>
             <div>
               <Allocations />
             </div>

@@ -52,141 +52,131 @@ const useStyles = makeStyles(theme =>
 
 function createData(
   id,
-  state,
+  name,
+  applicantId,
+  phone,
+  gender,
   lga,
-  allocation,
-  total_enrolled,
-  total_pre_load,
-  outstanding,
-  status,
-  data_allocated,
+  state,
+  dob,
   action
 ) {
-  return { id, state, lga, allocation, total_enrolled, total_pre_load, outstanding, status, data_allocated, action };
+  return { id, name, applicantId, phone, gender, lga, state, dob, action };
 }
 
 const rows = [
   createData(
     1,
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "09012345687",
+    "Male",
+    "Shomolu south",
     "Lagos",
-    "Yaba",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     2,
-    "Ekiti",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Closed",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "09012345687",
+    "Male",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     3,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "09012345687",
+    "Male",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     4,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "09012345687",
+    "Male",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     5,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "09012345687",
+    "Male",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     6,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "Male",
+    "09012345687",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     7,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "Male",
+    "09012345687",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   ),
   createData(
     8,
-    "Abuja",
-    "Ado",
-    "5,000",
-    "4,500",
-    "200",
-    "500",
-    "Open",
-    "31.01.2020",
+    "Opeyemi Ariyo",
+    "NG.ON.AR/AKY/000497",
+    "Male",
+    "09012345687",
+    "Shomolu south",
+    "Lagos",
+    "Shola Ariyo",
     <MoreIcon style={{ color: "#417505" }} />
   )
 ];
 
 const headCells = [
-  { id: "state", numeric: false, disablePadding: true, label: "State" },
+  { id: "name", numeric: false, disablePadding: true, label: "Name" },
   {
-    id: "lga",
+    id: "applicantId",
     numeric: true,
     disablePadding: false,
-    label: "LGA"
+    label: "Applicant ID"
   },
-  { id: "allocation", numeric: true, disablePadding: false, label: "Allocation" },
-  { id: "total_enrolled", numeric: true, disablePadding: false, label: "Total Enrolled" },
+  { id: "phone", numeric: true, disablePadding: false, label: "Phone Number" },
   {
-    id: "total_pre_load",
+    id: "gender",
     numeric: false,
     disablePadding: false,
-    label: "Total Pre-Enrolled"
+    label: "Gender"
   },
-  { id: "outstanding", numeric: false, disablePadding: false, label: "Outstanding" },
-  { id: "status", numeric: false, disablePadding: false, label: "Status" },
-  { id: "date_allocated", numeric: false, disablePadding: false, label: "Date Allocated" },
+  { id: "lga", numeric: false, disablePadding: false, label: "LGA" },
+  { id: "state", numeric: false, disablePadding: false, label: "State" },
+  { id: "dob", numeric: false, disablePadding: false, label: "DOB" },
   { id: "action", numeric: false, disablePadding: false, label: "" }
 ];
 
-export default function Allocations() {
+export default function Applicants() {
   const classes = useStyles();
   const [showFilter, setShowFilter] = React.useState(false);
   const displayFilter = () => setShowFilter(prevState => !prevState);
@@ -197,7 +187,7 @@ export default function Allocations() {
         <div className={classes.toolbar} />
 
         <Switch>
-          <Route exact path={`/allocations`}>
+          <Route exact path={`/applicants`}>
             <div>
               <div className={classes.button}>
                 <button
@@ -238,7 +228,7 @@ export default function Allocations() {
               <DisplayTable
                 rows={rows}
                 headCells={headCells}
-                heading="allocations"
+                heading="applicants"
                 // actionButton={<UserProfileAction />}
                 showCheck={false}
                 showToolbar={false}
