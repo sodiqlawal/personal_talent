@@ -7,6 +7,7 @@ import Congratulations from './components/Congratulations';
 import AddUserDrawer from "./components/AddUserDrawer"
 import Test from './components/Test';
 import Dashboard from './components/Dashboard';
+import StakeholdersDashboard from './components/stakeholders/StakeholdersDashboard';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import {Router, Route} from 'react-router-dom';
 import { createBrowserHistory } from "history";
@@ -65,6 +66,9 @@ const App = () => {
         </Route>
         <Route exact path="/users">
           <Dashboard />
+        </Route>
+        <Route exact path="/stakeholdersDashboard">
+          <StakeholdersDashboard />
         </Route>
       </Router>
     </ThemeProvider>

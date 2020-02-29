@@ -19,7 +19,7 @@
 
 .Home .nav .text {
   font-size: 40px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -30,11 +30,11 @@
 }
 
 .Home .nav .text span {
-  color: #268AFF;
+  color: #268aff;
 }
 
 .Home .nav .list {
-  color: #FFFFFF;
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,17 +46,17 @@
 
 .Home .nav .list .login {
   font-size: 24px;
-  -webkit-text-decoration-color: #FFFFFF;
-          text-decoration-color: #FFFFFF;
+  -webkit-text-decoration-color: #ffffff;
+          text-decoration-color: #ffffff;
 }
 
 .Home .nav .list .signup {
   text-decoration: none;
-  background-color: #268AFF;
+  background-color: #268aff;
   font-size: 24px;
   width: 147px;
   height: 50px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-width: 0;
   margin-left: 1rem;
 }
@@ -65,6 +65,7 @@
   .Home .nav .list .signup {
     font-size: 18px;
     width: 90px;
+    height: "40px";
   }
 }
 
@@ -118,8 +119,8 @@
 .Home .banner .banner-left button {
   width: 195px;
   height: 65px;
-  background-color: #268AFF;
-  color: #FFFFFF;
+  background-color: #268aff;
+  color: #ffffff;
   font-size: 32px;
   border-width: 0;
   cursor: pointer;
@@ -406,7 +407,7 @@
 
 .Home .terms .terms-top .terms-note {
   width: 30%;
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-size: 22px;
 }
 
@@ -431,7 +432,7 @@
 .Home .terms .terms-top .condition-container p {
   font-size: 22px;
   display: block;
-  color: #4A4A4A;
+  color: #4a4a4a;
   text-decoration: underline;
 }
 
@@ -499,7 +500,7 @@
 
 #wrapper .nav .text {
   font-size: 40px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -510,11 +511,11 @@
 }
 
 #wrapper .nav .text span {
-  color: #268AFF;
+  color: #268aff;
 }
 
 #wrapper .nav .list {
-  color: #FFFFFF;
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,11 +533,11 @@
 
 #wrapper .nav .list .signup {
   text-decoration: none;
-  background-color: #268AFF;
+  background-color: #268aff;
   font-size: 24px;
   width: 147px;
   height: 50px;
-  color: #FFFFFF;
+  color: #ffffff;
   border-width: 0;
   margin-left: 1rem;
 }
@@ -559,10 +560,5 @@
   background: "#FFFFFF";
   -webkit-box-shadow: 0px 3px 6px #00000029;
           box-shadow: 0px 3px 6px #00000029;
-}
-
-.icon:active {
-  background-color: yellow;
-  position: fixed;
 }
 /*# sourceMappingURL=Home.css.map */
