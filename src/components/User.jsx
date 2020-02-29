@@ -1,5 +1,6 @@
 import React from "react";
 import DisplayTable from "./Table";
+import UserAction from './UserAction'
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Switch, Route, NavLink, useParams } from "react-router-dom";
@@ -24,6 +25,9 @@ const useStyles = makeStyles(theme =>
       boxShadow: "2px 2px 10px #09a23c",
       cursor: "pointer"
     },
+    button: {
+        marginLeft: "4rem"
+      },
     iconcontent: {
       position: "absolute",
       right: "50%",
@@ -47,34 +51,33 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-function createData(id, name, applicantId, phone, gender, lga, state, dob, action) {
-  return { id, name, applicantId, phone, gender, lga, state, dob, action };
+function createData(id, name, role, phone, state, lga, status,action) {
+  return { id, name, role, phone, state, lga, status,action };
 }
 
 const rows = [
-  createData(1, "Opeyemi Ariyo", "NG.ON.AR/AKY/000497", "09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}}/> ),
-  createData(2, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(3, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(4, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(5, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497","09012345687", "Male", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(6, "Opeyemi Ariyo",   "NG.ON.AR/AKY/000497","Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(7, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
-  createData(8, "Opeyemi Ariyo",  "NG.ON.AR/AKY/000497", "Male","09012345687", "Shomolu south", "Lagos", "Shola Ariyo", <MoreIcon style={{color:"#417505"}} />),
+  createData(1, "Opeyemi Ariyo", "Stakeholder", "09012345687", "Lagos",  "Shomolu south","Active", <MoreIcon style={{color:"#417505"}}/> ),
+  createData(2, "Opeyemi Ariyo",  "Stakeholder","09012345687", "Lagos",  "Shomolu south","Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(3, "Opeyemi Ariyo",  "Stakeholder","09012345687", "Lagos",  "Shomolu south","Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(4, "Opeyemi Ariyo",  "Stakeholder","09012345687", "Lagos",  "Shomolu south","Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(5, "Opeyemi Ariyo",  "Stakeholder","09012345687", "Lagos",  "Shomolu south","Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(6, "Opeyemi Ariyo",   "Stakeholder","09012345687", "Lagos", "Shomolu south", "Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(7, "Opeyemi Ariyo",  "Stakeholder", "09012345687", "Lagos", "Shomolu south", "Active", <MoreIcon style={{color:"#417505"}} />),
+  createData(8, "Opeyemi Ariyo",  "Stakeholder", "09012345687", "Lagos", "Shomolu south", "Active", <MoreIcon style={{color:"#417505"}} />),
 ]
 
 const headCells = [
   { id: "name", numeric: false, disablePadding: true, label: "Name" },
-  { id: "applicantId", numeric: true, disablePadding: false, label: "Applicant ID" },
-  { id: "phone", numeric: true, disablePadding: false, label: "Phone Number" },
+  { id: "role", numeric: true, disablePadding: false, label: "Role" },
+  { id: "phone", numeric: true, disablePadding: false, label: "Phone" },
   {
-    id: "gender",
+    id: "state",
     numeric: false,
     disablePadding: false,
-    label: "Gender"
+    label: "State"
   },
   { id: "lga", numeric: false, disablePadding: false, label: "LGA" },
-  { id: "state", numeric: false, disablePadding: false, label: "State" },
-  { id: "dob", numeric: false, disablePadding: false, label: "DOB" },
+  { id: "status", numeric: false, disablePadding: false, label: "Status" },
   { id: "action", numeric: false, disablePadding: false, label: "" }
 ];
 
@@ -92,6 +95,11 @@ export default function Users() {
         <Switch>
           <Route exact path={`/users`}>
             <div>
+
+            <div className={classes.button}>
+                <UserAction />
+            </div>
+
               <DisplayTable
                 rows={rows}
                 headCells={headCells}

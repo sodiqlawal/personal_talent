@@ -13,6 +13,7 @@ import {
   Drawer,
   Hidden
 } from "@material-ui/core";
+import "./css/Home/Home.css"
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import FolderIcon from '@material-ui/icons/Folder';
@@ -56,6 +57,7 @@ const useStyles = makeStyles(theme =>
     icon: {
       fontSize: "1.8rem"
     },
+
     menuButton: {
       marginRight: theme.spacing(2),
       [theme.breakpoints.up("sm")]: {
@@ -130,7 +132,7 @@ const props = (props) => {
 const dashboardOptions = [
   [
     <div style={{ fontSize: "24px" }}>Dashboard</div>,
-    <img src={dashboard} alt="dashboard" style={{ color: "white", fontSize: "1.5rem", marginLeft: "10px" }} />,
+    <img src={dashboard} alt="dashboard" style={{ color: "white", fontSize: "1.5rem", marginLeft: "10px" }} id="icon" />,
     "/dashboard"
   ],
   [

@@ -77,9 +77,6 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center"
   },
-  button: {
-    marginLeft: "4rem"
-  },
 
   bottomRowDisplay:{
     marginTop: "2.5rem",
@@ -114,9 +111,6 @@ export default function EnhancedTable(props) {
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [showFilter, setShowFilter] = React.useState(false);
-
-  const displayFilter = () => setShowFilter(prevState => !prevState);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -170,41 +164,6 @@ export default function EnhancedTable(props) {
 
   return (
     <div className={classes.root}>
-      <div className={classes.button}>
-        <button
-          className="btn px-3"
-          onClick={displayFilter}
-          style={{
-            background: "#268AFF",
-            color: "#ffffff",
-            fontSize: "19px",
-            width: "96px",
-            height: "42px",
-            borderRadius: "7px",
-            boxShadow: "0px 2px 4px #00000020",
-            borderWidth:"0",
-          }}
-        >
-          Filter
-          <span className="ml-2">&#9660;</span>
-        </button>
-        <button
-          className="btn ml-4 px-4"
-          style={{
-            background: "#B5D7FF",
-            color: "#268AFF",
-            fontSize: "19px",
-            width: "96px",
-            height: "42px",
-            borderRadius: "7px",
-            boxShadow: "0px 2px 4px #00000020",
-            borderWidth:"0",
-            marginLeft:"2rem"
-          }}
-        >
-          Export
-        </button>
-      </div>
       {/* {showFilter && <FilterShow />} */}
       <Paper
         className={classes.paper}
@@ -271,7 +230,7 @@ export default function EnhancedTable(props) {
                             key={ind}
                             style={{ color:"#4B4B4B", fontSize: "17px" }}
                           >
-                            {val === "Active" ? (
+                            {/* {val === "Active" ? (
                               <div
                                 style={{
                                   backgroundColor: "#09a23c",
@@ -283,7 +242,9 @@ export default function EnhancedTable(props) {
                               >
                                 Active
                               </div>
-                            ) : val === "Deactivated" ? (
+                            ) */}
+                             {/* : */}
+                             { val === "Deactivated" ? (
                               <div
                                 style={{
                                   backgroundColor: "#de1325",
