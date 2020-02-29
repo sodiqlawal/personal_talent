@@ -258,7 +258,7 @@ export default function ResponsiveDrawer(props) {
                 <div>Disbursements</div>
               </Route>
               <Route exact path="/users">
-                <div>Users mgt</div>
+                <div>Users Management</div>
               </Route>
             </Switch>
           </Typography>

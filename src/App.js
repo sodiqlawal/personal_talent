@@ -4,6 +4,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ConfirmDetails from './components/ConfirmDetails';
 import Congratulations from './components/Congratulations';
+import AddUserDrawer from "./components/AddUserDrawer"
 import Test from './components/Test';
 import Dashboard from './components/Dashboard';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -40,6 +41,9 @@ const App = () => {
           </Route>
           <Route exact path="/confirm">
           <ConfirmDetails />
+          </Route>
+          <Route exact path="/userdrawer">
+          <AddUserDrawer />
           </Route>
           <Route exact path="/congratulations">
           <Congratulations />

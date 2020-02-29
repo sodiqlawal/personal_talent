@@ -1,9 +1,9 @@
 import React from "react";
 import DisplayTable from "./Table";
-import UserAction from './UserAction'
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Switch, Route, NavLink, useParams } from "react-router-dom";
+import AddUserDrawer from "./AddUserDrawer";
 // import UserProfileAction from "./UserProfileAction";
 
 const useStyles = makeStyles(theme =>
@@ -97,7 +97,7 @@ export default function Users() {
             <div>
 
             <div className={classes.button}>
-                <UserAction />
+                <AddUserDrawer />
             </div>
 
               <DisplayTable
