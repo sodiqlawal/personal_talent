@@ -18,7 +18,7 @@ const Home = () => {
         </p>
         <ul className="list">
           <li className="login"><Link to="/signin" style={{color:"#FFFFFF"}} >login</Link></li>
-          <button className="signup">Sign up</button>
+          <button className="signup"><Link to="/signup" style={{color:"#FFFFFF"}} >Sign up</Link></button>
         </ul>
       </div>
 
@@ -34,7 +34,7 @@ const Home = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi at
           facere vero omnis a alias voluptas non. Dignissimos, neque fugit.
         </p>
-        <button>Sign up</button>
+        <button><Link to="/signup" style={{color:"#FFFFFF"}}>Sign up</Link></button>
         </div>
 
         <img src={bannerImage} alt="banner" className="banner-image" />

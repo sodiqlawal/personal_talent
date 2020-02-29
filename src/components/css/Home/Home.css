@@ -6,7 +6,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0rem 8rem;
+  padding: 1rem 8rem 0.5rem 8rem;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -485,7 +485,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0rem 8rem;
+  padding: 1rem 8rem 0.5rem 8rem;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -521,12 +521,12 @@
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  text-decoration: none;
 }
 
 #wrapper .nav .list .login {
   font-size: 24px;
-  -webkit-text-decoration-color: #FFFFFF;
-          text-decoration-color: #FFFFFF;
+  text-decoration: none;
 }
 
 #wrapper .nav .list .signup {

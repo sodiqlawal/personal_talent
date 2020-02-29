@@ -1,6 +1,9 @@
 import React from 'react';
 import Home from './components/Home'
 import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import ConfirmDetails from './components/ConfirmDetails';
+import Congratulations from './components/Congratulations';
 import Dashboard from './components/Dashboard';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import {Router, Route} from 'react-router-dom';
@@ -30,6 +33,15 @@ const App = () => {
         </Route>
         <Route exact path="/signin">
           <SignIn />
+          </Route>
+          <Route exact path="/signup">
+          <SignUp />
+          </Route>
+          <Route exact path="/confirm">
+          <ConfirmDetails />
+          </Route>
+          <Route exact path="/congratulations">
+          <Congratulations />
           </Route>
         <Route exact path="/dashboard">
           <Dashboard />

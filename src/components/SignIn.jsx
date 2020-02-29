@@ -150,7 +150,7 @@ export default function SignIn() {
         </p>
         <ul className="list">
           <li className="login">login</li>
-          <button className="signup">Sign up</button>
+          <button className="signup"><Link to="/signup" style={{color:"#FFFFFF"}}>Sign up</Link></button>
         </ul>
       </div>
 
