@@ -16,7 +16,11 @@ const useStyles = makeStyles(theme => ({
   outerdiv: {
     height:"10px",
     width:"1256px",
-    background:"#FCFCEA"
+    background:"#FCFCEA",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+      },
   },
 
   innerdiv: {
@@ -29,11 +33,19 @@ const useStyles = makeStyles(theme => ({
     textAlign:"center",
     fontSize:"54px",
     fontWeight:"500",
-    marginBottom:"2rem"
+    marginBottom:"2rem",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"35px"
+      },
   },
 
   text: {
-    fontSize: "36px"
+    fontSize: "36px",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"30px"
+      },
   },
 
   signup: {
@@ -46,12 +58,21 @@ const useStyles = makeStyles(theme => ({
     background:"#FFFFFF",
     margin:"5rem auto 1rem auto",
     boxShadow: "0px 3px 6px #0000001A",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+        height:"fit-content"
+      },
   },
 
   formparent: {
     textAlign:"center",
     width:"80%",
-    margin:"0rem auto"
+    margin:"0rem auto",
+
+    [theme.breakpoints.down("sm")]: {
+        padding:"1rem"
+      },
 
   },
   buttonnumber: {
@@ -63,7 +84,14 @@ const useStyles = makeStyles(theme => ({
     borderWidth:"0",
     marginTop:"2rem",
     marginRight:"5rem",
-    borderRadius:"8px"
+    borderRadius:"8px",
+
+    [theme.breakpoints.down("sm")]: {
+        marginRight:"2rem",
+        width:"75px",
+        height:"40px",
+        fontSize:"22px"
+      },
   },
  
   buttonback: {
@@ -73,7 +101,13 @@ const useStyles = makeStyles(theme => ({
     fontSize:"24px",
     color:"#FFFFFF",
     borderWidth:"0",
-    marginTop:"4rem"
+    marginTop:"4rem",
+
+    [theme.breakpoints.down("sm")]: {
+       fontSize:"20px",
+       width:"150px",
+       height:"40px"
+      },
   },
 
   linkbegin: {
@@ -81,7 +115,11 @@ const useStyles = makeStyles(theme => ({
       color:"#9B9B9B",
       textDecoration:"underline",
       textDecorationColor:"#9B9B9B",
-      marginTop:"3rem"
+      marginTop:"3rem",
+
+      [theme.breakpoints.down("sm")]: {
+        fontSize:"20px"
+      },
   }
 
 
@@ -135,7 +173,7 @@ export default function Congratulations() {
             <p className={classes.text}>Check your mail to complete enrollment test</p>
 
                 <button className={classes.buttonback}><Link exact to="/" style={{color:"#FFFFFF"}}>Back to home</Link></button>
-                <p className={classes.linkbegin}><Link exact to="/test" style={{color:"#9B9B9B"}}>Click to begin test</Link></p>
+                <p className={classes.linkbegin}><Link to="/test" style={{color:"#9B9B9B"}}>Click to begin test</Link></p>
             </form>
             </div>
 

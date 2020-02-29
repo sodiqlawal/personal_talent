@@ -16,7 +16,11 @@ const useStyles = makeStyles(theme => ({
   outerdiv: {
     height:"10px",
     width:"1256px",
-    background:"#FCFCEA"
+    background:"#FCFCEA",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+      },
   },
 
   innerdiv: {
@@ -29,7 +33,11 @@ const useStyles = makeStyles(theme => ({
     textAlign:"center",
     fontSize:"54px",
     fontWeight:"500",
-    marginBottom:"2rem"
+    marginBottom:"2rem",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"35px"
+      },
   },
 
   signup: {
@@ -41,13 +49,23 @@ const useStyles = makeStyles(theme => ({
     height:"549px",
     background:"#FFFFFF",
     margin:"0 auto",
-    boxShadow: "0px 3px 6px #0000001A"
+    boxShadow: "0px 3px 6px #0000001A",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+        height:"fit-content"
+      },
   },
 
   formparent: {
     textAlign:"center",
     width:"60%",
-    margin:"0 auto"
+    margin:"0 auto",
+
+    [theme.breakpoints.down("sm")]: {
+        padding:"1rem",
+        width:"100%"
+      },
 
   },
 
@@ -57,23 +75,31 @@ const useStyles = makeStyles(theme => ({
   },
 
   topcontentname: {
-    lineHeight:"1.4rem",
+    lineHeight:"2rem",
     textAlign:"start"
   },
 
   topcontentbvn: {
-    lineHeight:"1.4rem",
+    lineHeight:"2rem",
     marginLeft:"3rem",
     textAlign:"start"
   },
 
   strong: {
     fontSize:"28px",
-    fontWeight:"bold"
+    fontWeight:"bold",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"22px"
+      },
   },
 
   text: {
-    fontSize:"39px"
+    fontSize:"39px",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"28px"
+      },
   },
 
   key: {
@@ -112,7 +138,14 @@ const useStyles = makeStyles(theme => ({
     borderWidth:"0",
     marginTop:"2rem",
     marginRight:"5rem",
-    borderRadius:"8px"
+    borderRadius:"8px",
+
+    [theme.breakpoints.down("sm")]: {
+        marginRight:"2rem",
+        width:"75px",
+        height:"40px",
+        fontSize:"22px"
+      },
   },
 
   
@@ -123,7 +156,13 @@ const useStyles = makeStyles(theme => ({
     fontSize:"24px",
     color:"#FFFFFF",
     borderWidth:"0",
-    marginTop:"4rem"
+    marginTop:"4rem",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"20px",
+        width:"150px",
+        height:"40px"
+       },
   }
 
 

@@ -17,8 +17,8 @@
     position: sticky;
 
     @include iphone {
-        padding: 0rem 1rem ;
-      }    
+      padding:1rem 1rem 0.5rem 1rem ;
+    }    
 
 
     .text {
@@ -449,7 +449,7 @@
         position: sticky;
     
         @include iphone {
-            padding: 0rem 1rem ;
+            padding:1rem 1rem 0.5rem 1rem ;
           }    
     
     

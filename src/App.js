@@ -4,6 +4,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ConfirmDetails from './components/ConfirmDetails';
 import Congratulations from './components/Congratulations';
+import Test from './components/Test';
 import Dashboard from './components/Dashboard';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import {Router, Route} from 'react-router-dom';
@@ -42,6 +43,9 @@ const App = () => {
           </Route>
           <Route exact path="/congratulations">
           <Congratulations />
+          </Route>
+          <Route exact path="/test">
+          <Test />
           </Route>
         <Route exact path="/dashboard">
           <Dashboard />

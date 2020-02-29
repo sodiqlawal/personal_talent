@@ -10,17 +10,23 @@ const useStyles = makeStyles(theme => ({
   wrapper:{
     backgroundColor: "#f2f6fd",
     width: "100%",
-    height:"100vh"
+    height:"fit-content",
+    paddingBottom:"2rem"
+    // position:"sticky",
   },
 
   outerdiv: {
     height:"10px",
     width:"1256px",
-    background:"#FCFCEA"
+    background:"#FCFCEA",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+      },
   },
 
   innerdiv: {
-    width:"33%",
+    width:"100%",
     height:"10px",
     background:"#268AFF"
   },
@@ -29,70 +35,72 @@ const useStyles = makeStyles(theme => ({
     textAlign:"center",
     fontSize:"54px",
     fontWeight:"500",
-    marginBottom:"2rem"
+    marginBottom:"2rem",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"35px",
+        marginLeft:"0.5rem"
+      },
   },
 
   signup: {
-    textAlign:"end",
+    // textAlign:"end",
   },
 
   formcontainer: {
     width:"1256px",
-    height:"649px",
+    height:"fit-content",
     background:"#FFFFFF",
     margin:"0 auto",
-    boxShadow: "0px 3px 6px #0000001A"
+    boxShadow: "0px 3px 6px #0000001A",
+
+    [theme.breakpoints.down("md")]: {
+        width:"100%",
+        height:"fit-content"
+      },
   },
 
   formparent: {
-    textAlign:"center",
+    // textAlign:"center",
+    padding:"2rem 8rem",
+
+    [theme.breakpoints.down("sm")]: {
+       padding:"1rem"
+       },
 
   },
 
-  buttonnumber: {
-    width:"83px",
-    height:"49px",
-    fontSize:"30px",
-    background:"#74B4FF",
-    marginBottom:"3rem",
-    borderWidth:"0",
-    marginTop:"2rem",
-    marginRight:"5rem",
-    borderRadius:"8px"
+  fieldset: {
+    margin:"1rem"
   },
 
-  fullbox: {
-    width:"859px",
-    height:"63px",
-    background:"#FCFCEA",
-    // color:"#D0D0D0",
-    fontSize:"16px",
-    paddingLeft:"2rem",
-    marginBottom:"1rem",
-    borderWidth:"0"
+  legend: {
+    fontSize:"24px",
+    color:"#020101",
+    marginBottom:"1rem"
   },
 
-  halfbox: {
-    width:"415px",
-    height:"63px",
-    background:"#FCFCEA",
-    // color:"#D0D0D0",
-    fontSize:"16px",
-    marginBottom:"1rem",
-    borderWidth:"0",
-    paddingLeft:"2rem",
+  checkcontainer: {
+    marginBottom:"1rem"
   },
 
-  halfboxtwo: {
-    width:"415px",
-    height:"63px",
-    background:"#FCFCEA",
-    // color:"#D0D0D0",
-    fontSize:"16px",
-    marginLeft:"2rem",
-    marginBottom:"1rem",
-    borderWidth:"0",
-    paddingLeft:"2rem",
+  input: {
+    width:"16px",
+    height:"16px"
+  },
+
+  rule: {
+     background:"#B5D7FF" 
+  },
+
+  label: {
+    fontize:"20px",
+    color:"#9B9B9B",
+    marginLeft:"5px",
+  },
+
+  nextcontainer: {
+    textAlign:"center"
   },
   buttonnext: {
     width:"147px",
@@ -101,7 +109,13 @@ const useStyles = makeStyles(theme => ({
     fontSize:"24px",
     color:"#FFFFFF",
     borderWidth:"0",
-    marginTop:"2rem"
+    marginTop:"2rem",
+
+    [theme.breakpoints.down("sm")]: {
+        fontSize:"20px",
+        width:"150px",
+        height:"40px"
+       },
   }
 
 
@@ -144,7 +158,7 @@ export default function Test() {
 
 
 
-            <p className={classes.details}>Enter your details</p>
+            <p className={classes.details}>Briefly answer these questions</p>
 
             <div className={classes.formcontainer}>
 
@@ -153,36 +167,64 @@ export default function Test() {
                 <div className={classes.innerdiv}></div>
             </div>
 
-
-                <button className={classes.buttonnumber}>1/3</button>
             <form className={classes.formparent}>
 
 
-                <div>
-                <input type="text" placeholder="BVN" className={classes.fullbox} />
+                <fieldset className={classes.fieldset}>
+                <legend className={classes.legend}>The "groundup" and "trees down" theories are the only theories explaining flight in birds.</legend>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="true" name="true" value="true" className={classes.input} />
+                    <label htmlFor="true" className={classes.label}>True</label>
                 </div>
-
-                <div>
-                    <input type="text" placeholder="First Name" className={classes.halfbox} />
-                    <input type="text" placeholder="Last Name" className={classes.halfboxtwo} />
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="false" name="false" value="false" className={classes.input} />
+                    <label htmlFor="false" className={classes.label}>False</label>
                 </div>
-
-
-                <div>
-                    <input type="text" placeholder="Phone Number" className={classes.halfbox} />
-                    <input type="text" placeholder="Email Address" className={classes.halfboxtwo} />
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="cannot-say" name="cannot-say" value="cannot-say" className={classes.input} />
+                    <label htmlFor="cannot-say" className={classes.label}>Cannot say</label>
                 </div>
+                <hr className={classes.rule} />
+                </fieldset>
 
-                <div>
-                    <input type="text" placeholder="State" className={classes.halfbox} />
-                    <input type="text" placeholder="LGA" className={classes.halfboxtwo} />
-                </div> 
 
-                <div>
-                    <input type="text" placeholder="Address" className={classes.fullbox} />
-                </div>      
+                <fieldset className={classes.fieldset}>
+                <legend className={classes.legend}>All dinosaurs had hollow bones.</legend>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="true" name="true" value="true" className={classes.input} />
+                    <label htmlFor="true" className={classes.label}>True</label>
+                </div>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="false" name="false" value="false" className={classes.input} />
+                    <label htmlFor="false" className={classes.label}>False</label>
+                </div>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="cannot-say" name="cannot-say" value="cannot-say" className={classes.input} />
+                    <label htmlFor="cannot-say" className={classes.label}>Cannot say</label>
+                </div>
+                <hr className={classes.rule} />
+                </fieldset>
 
-                <button className={classes.buttonnext}><Link to="/confirm" style={{color:"#FFFFFF"}}>Next</Link></button>
+
+                <fieldset className={classes.fieldset}>
+                <legend className={classes.legend}>There is no scientific consensus regarding how birds evolved powered flight.</legend>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="true" name="true" value="true" className={classes.input} />
+                    <label htmlFor="true" className={classes.label}>True</label>
+                </div>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="false" name="false" value="false" className={classes.input} />
+                    <label htmlFor="false" className={classes.label}>False</label>
+                </div>
+                <div className={classes.checkcontainer}>
+                    <input type="checkbox" id="cannot-say" name="cannot-say" value="cannot-say" className={classes.input} />
+                    <label htmlFor="cannot-say" className={classes.label}>Cannot say</label>
+                </div>
+                </fieldset>
+
+                <div className={classes.nextcontainer}>
+                <button className={classes.buttonnext}><Link exact to="/" style={{color:"#FFFFFF"}}>Next</Link></button>
+                </div>
             </form>
             </div>
 

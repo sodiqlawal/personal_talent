@@ -13,7 +13,7 @@
 
 @media (max-width: 576px) {
   .Home .nav {
-    padding: 0rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
 }
 
@@ -492,7 +492,7 @@
 
 @media (max-width: 576px) {
   #wrapper .nav {
-    padding: 0rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
 }
 
